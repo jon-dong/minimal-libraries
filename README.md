@@ -1,7 +1,17 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/overview-dark.png">
-  <img alt="Minimal libraries: readable code, high performance, minimal dependencies and small LLM context, with minimal-linop and minimal-zoom-fft." src="docs/assets/overview.png">
-</picture>
+<p>
+  <a href="docs/assets/overview.webp#gh-light-mode-only">
+    <picture>
+      <source media="(max-width: 600px)" srcset="docs/assets/overview-mobile.webp">
+      <img alt="Minimal libraries: readable code, high performance, minimal dependencies and small LLM context, with minimal-linop and minimal-zoom-fft." src="docs/assets/overview.webp" width="640">
+    </picture>
+  </a>
+  <a href="docs/assets/overview-dark.webp#gh-dark-mode-only">
+    <picture>
+      <source media="(max-width: 600px)" srcset="docs/assets/overview-mobile-dark.webp">
+      <img alt="Minimal libraries: readable code, high performance, minimal dependencies and small LLM context, with minimal-linop and minimal-zoom-fft." src="docs/assets/overview-dark.webp" width="640">
+    </picture>
+  </a>
+</p>
 
 Small PyTorch libraries for computational imaging, each focused on one task, with
 concise, readable code and high performance.
