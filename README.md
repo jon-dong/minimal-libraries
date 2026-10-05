@@ -1,5 +1,3 @@
-# Minimal libraries
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/overview-dark.png">
   <img alt="Minimal libraries: readable code, high performance, minimal dependencies and small LLM context, with minimal-linop and minimal-zoom-fft." src="docs/assets/overview.png">
