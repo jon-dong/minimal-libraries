@@ -1,13 +1,14 @@
 # Minimal libraries
 
-Small PyTorch libraries for computational imaging. One task each, short enough to read
-whole, each in its own repository.
+Small PyTorch libraries for computational imaging, each focused on one task, with
+concise, readable code and high performance.
 
-Most scientific code sits inside a framework, where the part you need is hard to find
-and harder to check. Here a library is a few hundred lines: formulas in the README,
-tests that pin every convention, three notebooks. Every non-trivial algorithm comes
-twice, a plain version with loops and a fast one, held equal by a test. Trailing axes
-are the signal, leading axes are batch; any device, differentiable, dtype preserved.
+As more code is written by LLMs, these libraries aim to provide reliable reference
+implementations that are easy to read, check and learn from. Explicit mathematical
+conventions, tests and tutorial notebooks support both practical use and teaching.
+
+The minimal structure also makes them easy to import into larger codebases and
+saves context tokens when LLMs need to inspect their implementations.
 
 ## Libraries
 
@@ -16,17 +17,17 @@ are the signal, leading axes are batch; any device, differentiable, dtype preser
 | [minimal-zoom-fft](https://github.com/jon-dong/minimal-zoom-fft) | Zoomed FFT by the chirp Z-transform, with its adjoint. |
 | [minimal-linop](https://github.com/jon-dong/minimal-linop) | Linear operators with exact adjoints, composable with `@`, `+`, `*` and `.H`. |
 
-More are on the way, one at a time as each is reviewed.
+More libraries will be added.
 
 ## Install
 
 ```bash
-pip install git+https://github.com/jon-dong/minimal-zoom-fft
-pip install git+https://github.com/jon-dong/minimal-linop
+pip install minimal-zoom-fft
+pip install minimal-linop
 ```
 
-Python 3.10 or later, PyTorch 2.0 or later, nothing else. `minimal-linop` has an
-optional `fft` extra that brings in `minimal-zoom-fft` for one operator.
+Python 3.10 or later and PyTorch 2.0 or later, with no other mandatory runtime
+dependencies.
 
 ## Layout
 
@@ -36,12 +37,28 @@ minimal-<name>/
 ├── pyproject.toml          version, torch; `test` and `notebooks` extras
 ├── .github/workflows/      tests on every push, PyPI on a version tag
 ├── src/minimal_<name>/     the implementation, plain versions first
-├── notebooks/              01 why, 02 what it computes, 03 benchmark
+├── notebooks/              01 tutorial, 02 details, 03 benchmark
 └── tests/                  pytest; the README and the notebooks run as tests
 ```
 
 The last section of each README is a manifest: purpose, dependencies, size, origin,
 provenance, version and license.
+
+## Inspirations
+
+This collection draws inspiration from the following projects:
+
+| Project | Focus |
+|---|---|
+| [GlobalBioIm](https://github.com/Biomedical-Imaging-Group/GlobalBioIm) | Imaging operators, cost functions and optimization in MATLAB. |
+| [DeepInverse](https://github.com/deepinv/deepinv) | Imaging inverse problems and deep learning in PyTorch. |
+| [Pyxu](https://github.com/pyxu-org/pyxu) | Operator algebra and optimization for computational imaging in Python. |
+| [PyLops](https://github.com/PyLops/pylops) | Matrix-free linear operators and inverse problems in Python. |
+
+## Feedback
+
+Feedback, bug reports and suggestions are welcome. Open an issue in the relevant
+library's repository or contact [Jonathan Dong](mailto:jonathan.dong@epfl.ch).
 
 ## License
 
