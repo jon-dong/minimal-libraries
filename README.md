@@ -1,5 +1,7 @@
 # Minimal libraries
 
+![Minimal libraries: readable code, high performance, minimal dependencies and small LLM context, with minimal-linop and minimal-zoom-fft.](docs/assets/overview.png)
+
 Small PyTorch libraries for computational imaging, each focused on one task, with
 concise, readable code and high performance.
 
